@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Trading With Karol</title>
+
+  <!-- Meta Pixel Code
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #172033;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px 22px 25px;
+      text-align: center;
+    }
+
+    /* PROFILE */
+    .profile {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 7px solid #2450ff;
+      box-shadow: 0 8px 25px rgba(36,80,255,.22);
+      display: block;
+      margin: 10px auto 45px;
+    }
+
+    /* LIVE BADGE */
+    .live {
+      position: relative;
+      display: inline-block;
+    }
+
+    .live span {
+      position: absolute;
+      right: -12px;
+      bottom: 5px;
+      background: #ff5454;
+      color: white;
+      font-weight: 800;
+      padding: 10px 19px;
+      border-radius: 25px;
+      font-size: 18px;
+      box-shadow: 0 7px 16px rgba(255,84,84,.25);
+    }
+
+    /* BLUE LABEL */
+    .label {
+      background: linear-gradient(90deg,#2148ff,#2865e8);
+      color: white;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      padding: 17px 15px;
+      border-radius: 40px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 22px rgba(37,81,255,.20);
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 35px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .verified {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      background: #239fe8;
+      color: white;
+      border-radius: 50%;
+      font-family: Arial;
+      font-size: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
+    .subtitle {
+      color: #687b98;
+      font-size: 25px;
+      line-height: 1.55;
+      margin-bottom: 55px;
+    }
+
+    /* TELEGRAM BUTTON */
+    .telegram-btn {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(90deg,#20c45b,#13ad4d);
+      color: white;
+      font-size: 25px;
+      font-weight: 800;
+      padding: 25px 15px;
+      border-radius: 34px;
+      margin-bottom: 50px;
+      box-shadow: 0 8px 20px rgba(20,190,80,.18);
+      transition: .2s;
+    }
+
+    .telegram-btn:active {
+      transform: scale(.98);
+    }
+
+    /* FEATURES */
+    .feature {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      border: 2px solid #e0e7f0;
+      background: #fbfcfe;
+      border-radius: 28px;
+      padding: 25px 27px;
+      margin-bottom: 28px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #35455d;
+    }
+
+    .icon {
+      font-size: 27px;
+      width: 45px;
+      flex-shrink: 0;
+    }
+
+    /* DISCLAIMER */
+    .line {
+      border-top: 2px dashed #ccd6e5;
+      margin-top: 75px;
+      padding-top: 40px;
+    }
+
+    .disclaimer {
+      text-align: left;
+      color: #71839f;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    /* AGENCY */
+    .agency {
+      margin-top: 38px;
+      padding-top: 25px;
+      border-top: 1px solid #e6ebf2;
+      font-size: 16px;
+      color: #8a9bb5;
+    }
+
+    .agency a {
+      color: #2450ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .copyright {
+      margin-top: 28px;
+      color: #9aabc1;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media(max-width: 480px) {
+
+      .container {
+        padding: 25px 18px 20px;
+      }
+
+      .profile {
+        width: 165px;
+        height: 165px;
+        margin-bottom: 42px;
+      }
+
+      .live span {
+        font-size: 15px;
+        padding: 8px 14px;
+      }
+
+      .label {
+        font-size: 18px;
+        letter-spacing: 3px;
+        padding: 15px 10px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+        margin-bottom: 42px;
+      }
+
+      .telegram-btn {
+        font-size: 20px;
+        padding: 22px 10px;
+        border-radius: 28px;
+        margin-bottom: 40px;
+      }
+
+      .feature {
+        font-size: 18px;
+        padding: 22px 18px;
+        border-radius: 22px;
+        margin-bottom: 20px;
+      }
+
+      .disclaimer {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- PROFILE PHOTO -->
+    <div class="live">
+      <img src="profile.jpg" class="profile" alt="Trading Profile">
+      <span>LIVE</span>
+    </div>
+
+    <!-- TOP LABEL -->
+    <div class="label">
+      TRADING COMMUNITY
+    </div>
+
+    <!-- TITLE -->
+    <h1>
+      TRADING WITH KAROL
+      <span class="verified">✓</span>
+    </h1>
+
+    <p class="subtitle">
+      Mastering Index Trading &amp; Price Action<br>
+      with Simplicity.
+    </p>
+
+    <!-- TELEGRAM BUTTON -->
+    <a href="https://t.me/yourtelegram"
+       class="telegram-btn"
+       target="_blank">
+      🚀 &nbsp; JOIN FREE TELEGRAM
+    </a>
+
+    <!-- FEATURES -->
+    <div class="feature">
+      <span class="icon">📈</span>
+      <span>Live Index Market Analysis</span>
+    </div>
+
+    <div class="feature">
+      <span class="icon">💡</span>
+      <span>Simple Price Action Strategy</span>
+    </div>
+
+    <div class="feature">
+      <span class="icon">🛡️</span>
+      <span>SEBI Registered Entity</span>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="line">
+      <p class="disclaimer">
+        Disclaimer: Investment in securities market are subject to market
+        risks. Read all the related documents carefully before investing.
+        Registration granted by SEBI and certification from NISM in no way
+        guarantee performance of the intermediary or provide any assurance
+        of returns to investors. All content shared is for educational and
+        informational purposes only.
+      </p>
+    </div>
+
+    <!-- ADS MANAGE BY -->
+    <div class="agency">
+      Ads Manage By
+      <a href="https://t.me/+nTRMAouerik1ZGY1" target="_blank">
+        Adsbig Agency
+      </a>
+    </div>
+
+    <div class="copyright">
+      TRADING WITH KAROL · © 2026
+    </div>
+
+  </div>
+
+</body>
+</html>
